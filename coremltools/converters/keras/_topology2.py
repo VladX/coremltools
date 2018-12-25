@@ -359,7 +359,6 @@ class NetGraph(object):
         if snk not in self.reverse_edge_map:
             self.reverse_edge_map[snk] = []
         if src not in self.reverse_edge_map[snk]:
-            self.reverse_edge_map[snk].append(src)
             if hint_predecessor_idx is not None and hint_predecessor_idx < len(self.reverse_edge_map):
                 self.reverse_edge_map[snk].insert(hint_predecessor_idx, src)
             else:
